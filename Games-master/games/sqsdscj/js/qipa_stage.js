@@ -197,7 +197,7 @@ function MyProgressBar(a, d, b) {
 	b.y = 150;
 	b.textAlign = "center";
 	this.addChild(b);
-	b = new createjs.Text("微信公众号: 奇葩游戏", "38px Arial", "black");
+	b = new createjs.Text(" 奇葩游戏", "38px Arial", "black");
 	b.x = a / 2;
 	b.y = 260;
 	b.textAlign = "center";
