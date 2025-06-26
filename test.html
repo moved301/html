@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>系统性能测试</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 50px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .progress {
+      height: 25px;
+      width: 100%;
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: #4caf50;
+      text-align: center;
+      line-height: 25px;
+      color: white;
+      transition: width 0.5s;
+    }
+
+    .result {
+      display: none;
+      margin-top: 30px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0b7dda;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>系统连接测试</h1>
+    <p>点击按钮开始测试系统性能</p>
+    
+    <div class="progress">
+      <div class="bar" id="bar">0%</div>
+    </div>
+
+    <button onclick="startFakeTest()">开始测试</button>
+
+    <div class="result" id="result">
+      ✅ 测试完成！你的设备评分为：<strong>992/1000</strong><br>
+      建议：保持网络状态，继续高效运行！
+    </div>
+  </div>
+
+  <script>
+    function startFakeTest() {
+      let bar = document.getElementById("bar");
+      let result = document.getElementById("result");
+      bar.style.width = "0%";
+      bar.innerText = "0%";
+      result.style.display = "none";
+
+      let progress = 0;
+      let interval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(interval);
+          result.style.display = "block";
+        }
+        bar.style.width = progress.toFixed(0) + "%";
+        bar.innerText = progress.toFixed(0) + "%";
+      }, 200);
+    }
+  </script>
+</body>
+</html>
+
