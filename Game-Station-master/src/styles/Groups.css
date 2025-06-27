@@ -1,0 +1,75 @@
+#groups {
+  margin: 50px auto;
+}
+
+#groups h2 {
+  color: #fdf000;
+  font-size: 28px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#groups .icon {
+  margin-bottom: -3px;
+}
+
+#groups .group-boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#groups article {
+  flex: 1 0 25%;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#groups article div {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #010508;
+}
+
+#groups img {
+  width: 100%;
+  height: 225px;
+}
+
+#groups h4 {
+  margin: 10px;
+}
+
+#groups button {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #fdf000;
+}
+
+#groups button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1300px) {
+  #groups article {
+    flex: 1 0 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  #groups h2 {
+    padding-top: 0;
+  }
+
+  #groups article {
+    padding: 10px;
+    flex: 1 0 50%;
+  }
+}

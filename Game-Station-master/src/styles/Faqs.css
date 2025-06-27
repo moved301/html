@@ -1,0 +1,49 @@
+#faqs {
+  margin: 50px auto;
+}
+
+#faqs h2 {
+  color: #fdf000;
+  font-size: 28px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#faqs .icon {
+  font-size: 24px;
+  margin: 0 3px -3px 0;
+}
+
+#faqs summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#faqs details {
+  color: white;
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #010508;
+}
+
+#faqs details p {
+  padding: 20px;
+  font-size: 18px;
+  color: #b9b8b8;
+  margin-bottom: 0;
+  border-radius: 10px;
+  background-color: #2929294b;
+}
+
+@media (max-width: 600px) {
+  #faqs h2 {
+    padding-top: 0;
+    font-size: 22px;
+  }
+
+  #faqs details {
+    font-size: 18px;
+  }
+}
