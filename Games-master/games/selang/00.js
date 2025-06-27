@@ -172,7 +172,7 @@ function successHandler(m, t) {
 function failHandler(t) {
     helpCount++;
     if (helpCount > 2) {
-        if (confirm("是不是没有想象的那么简单？您有【一次机会】获得提示，点击关注公众号并回复【小心色狼怎么过】可以得到提示，是否需要提示？")) {
+        if (confirm("是不是没有想象的那么简单？")) {
             location.href = "http://mp.weixin.qq.com/s?__biz=MjM5NjA0MTI0OQ==&mid=200068987&idx=1&sn=1de5daeaae94c66a3c46a13e20e8011e#rd"
         };
         helpCount = 0
